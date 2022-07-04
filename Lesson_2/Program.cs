@@ -16,6 +16,7 @@ namespace Lesson_2
 
             // if..else
 
+            // Enter  two number to check which is bigger or equals
 
             Console.WriteLine("Enter two number to check which is bigger");
 
@@ -44,6 +45,24 @@ namespace Lesson_2
                 Console.WriteLine("Something gone wrong!");
             }
 
+
+            // Enter a number from 5 to 10 (range)
+
+            int minRangeFive = 5;
+            int maxRangeTen = 10;
+
+            Console.WriteLine("Enter a number from 5 to 10 (range)");
+           
+            int askForNumber = Convert.ToInt32(Console.ReadLine());
+
+            if (askForNumber > 5 && askForNumber < 10)
+            {
+                Console.WriteLine($"{askForNumber} is big from {minRangeFive} and small from {maxRangeTen}");
+            }
+            else
+            {
+                Console.WriteLine($"{askForNumber} is out of rang (5 - 10)");
+            }
 
 
 
