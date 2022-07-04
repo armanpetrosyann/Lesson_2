@@ -16,6 +16,7 @@ namespace Lesson_2
 
             // if..else
 
+
             Console.WriteLine("Enter two number to check which is bigger");
 
             Console.Write("Enter first number: ");
@@ -42,6 +43,9 @@ namespace Lesson_2
             {
                 Console.WriteLine("Something gone wrong!");
             }
+
+
+
 
 
         }
