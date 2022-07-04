@@ -52,7 +52,7 @@ namespace Lesson_2
             int maxRangeTen = 10;
 
             Console.WriteLine("Enter a number from 5 to 10 (range)");
-           
+
             int askForNumber = Convert.ToInt32(Console.ReadLine());
 
             if (askForNumber > 5 && askForNumber < 10)
@@ -76,6 +76,32 @@ namespace Lesson_2
             if (firstNumber == fixFive || firstNumber == fixTen)
             {
                 Console.WriteLine($"{firstNumber} is {fixFive} or {fixTen}");
+            }
+
+            // Client deposit amount checker in a bank
+
+            Console.WriteLine("Enter number to check deposit amount client of bank");
+
+            double depositAmount = Convert.ToDouble(Console.ReadLine());
+
+            if (depositAmount < 100)
+            {
+                double resultOfDepositAmount = (depositAmount / 5) * 100;
+                Console.WriteLine(resultOfDepositAmount);
+            }
+            else if (depositAmount > 100 && depositAmount < 200)
+            {
+                double resultOfDepositAmount = (depositAmount / 7) * 100;
+                Console.WriteLine(resultOfDepositAmount);
+            }
+            else if (depositAmount > 200)
+            {
+                double resultOfDepositAmount = (depositAmount / 10) * 100;
+                Console.WriteLine(resultOfDepositAmount);
+            }
+            else
+            {
+                Console.WriteLine("Something gone wrong!");
             }
 
         }
