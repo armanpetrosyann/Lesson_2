@@ -64,8 +64,19 @@ namespace Lesson_2
                 Console.WriteLine($"{askForNumber} is out of rang (5 - 10)");
             }
 
+            // Enter number 5 or 10 only
 
+            int fixFive = 5;
+            int fixTen = 10;
 
+            Console.WriteLine("Enter only 5 or 10 numbers");
+
+            int firstNumber = Convert.ToInt32(Console.ReadLine());
+
+            if (firstNumber == fixFive || firstNumber == fixTen)
+            {
+                Console.WriteLine($"{firstNumber} is {fixFive} or {fixTen}");
+            }
 
         }
     }
