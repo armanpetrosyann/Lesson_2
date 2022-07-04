@@ -104,6 +104,33 @@ namespace Lesson_2
                 Console.WriteLine("Something gone wrong!");
             }
 
+            // Client deposit amount checker in a bank with (bonus)
+
+            double bonusToUser = 15d;
+
+            Console.WriteLine("Enter number to check deposit amount client of bank (+15 bonus)");
+
+            double depositAmountOfUser = Convert.ToDouble(Console.ReadLine());
+
+            if (depositAmountOfUser < 100)
+            {
+                double resultOfDepositAmountWithBonus = ((depositAmountOfUser / 5) + bonusToUser) * 100;
+                Console.WriteLine(resultOfDepositAmountWithBonus);
+            } else if (depositAmountOfUser > 100 && depositAmountOfUser < 200)
+            {
+                double resultOfDepositAmountWithBonus = ((depositAmountOfUser / 7) + bonusToUser) * 100;
+                Console.WriteLine(resultOfDepositAmountWithBonus);
+            } else if(depositAmountOfUser > 200)
+            {
+                double resulOfDepositAmountWithBonus = ((depositAmountOfUser / 10) + bonusToUser ) * 100;
+                Console.WriteLine(resulOfDepositAmountWithBonus);
+            }
+            else
+            {
+                Console.WriteLine("Something gone wrong!");
+            }
+
+
         }
     }
 }
