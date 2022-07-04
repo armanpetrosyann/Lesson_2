@@ -116,13 +116,15 @@ namespace Lesson_2
             {
                 double resultOfDepositAmountWithBonus = ((depositAmountOfUser / 5) + bonusToUser) * 100;
                 Console.WriteLine(resultOfDepositAmountWithBonus);
-            } else if (depositAmountOfUser > 100 && depositAmountOfUser < 200)
+            }
+            else if (depositAmountOfUser > 100 && depositAmountOfUser < 200)
             {
                 double resultOfDepositAmountWithBonus = ((depositAmountOfUser / 7) + bonusToUser) * 100;
                 Console.WriteLine(resultOfDepositAmountWithBonus);
-            } else if(depositAmountOfUser > 200)
+            }
+            else if (depositAmountOfUser > 200)
             {
-                double resulOfDepositAmountWithBonus = ((depositAmountOfUser / 10) + bonusToUser ) * 100;
+                double resulOfDepositAmountWithBonus = ((depositAmountOfUser / 10) + bonusToUser) * 100;
                 Console.WriteLine(resulOfDepositAmountWithBonus);
             }
             else
@@ -130,7 +132,52 @@ namespace Lesson_2
                 Console.WriteLine("Something gone wrong!");
             }
 
+            // Calculator with operation types (+,-,*,/)
 
+            int addition = 1;
+            int subtraction = 2;
+            int multiplication = 3;
+            int divide = 4;
+
+
+            Console.WriteLine("Enter two number and operation type to calculate");
+
+            Console.Write("Enter first number: ");
+            double numOne = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Enter two number: ");
+            double numTwo = Convert.ToUInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter operation type by symbol");
+            Console.WriteLine($"1: Addition ({addition})");
+            Console.WriteLine($"2: Subtraction ({subtraction})");
+            Console.WriteLine($"3: Multiplication ({multiplication})");
+            Console.WriteLine($"3: Divide ({divide})");
+
+            int operationType = Convert.ToInt32(Console.ReadLine());
+
+            switch (operationType)
+            {
+                case 1:
+                    Console.WriteLine("You chose operation addition");
+                    Console.WriteLine($"Result is: {numOne + numTwo}");
+                    break;
+                case 2:
+                    Console.WriteLine("You chose operation subtraction");
+                    Console.WriteLine($"Result is: {numOne - numTwo}");
+                    break;
+                case 3:
+                    Console.WriteLine("You chose operation multiplication");
+                    Console.WriteLine($"Result is: {numOne * numTwo}");
+                    break;
+                case 4:
+                    Console.WriteLine("You chose operation subtraction");
+                    Console.WriteLine($"Result is: {numOne / numTwo}");
+                    break;
+                default:
+                    Console.WriteLine("Operation is not found");
+                    break;
+            }
         }
     }
 }
